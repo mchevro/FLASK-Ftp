@@ -26,7 +26,7 @@ def index():
             try:
                 filename = data_file.filename
                 data_file.save(filename) # Menyimpan file ke lokal
-                files = Ftp('ftp.tomcatsquad.web.id', 'mchevro@files.tomcatsquad.web.id', '2UTA@?Q*[##U') # FTP Account
+                files = Ftp('HOST', 'USERNAME', 'PASSWORD') # FTP Account
                 files.send(filename) # Kirim file ke ftp
                 time.sleep(1.5) # Jeda 1.5 detik
                 os.remove(filename) # Hapus file yang diupload ke dalam lokal, karena file yang diupload sudah dikirim ke ftp server
